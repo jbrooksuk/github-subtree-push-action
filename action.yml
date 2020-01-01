@@ -1,6 +1,6 @@
-name: 'GitHub Push'
-description: 'Pushing to GitHub repository local changes'
-author: 'ad-m'
+name: 'GitHub Subtree Push'
+description: 'Pushing to a GitHub repository subtree local changes'
+author: 'jbrooksuk'
 branding:
   icon: upload-cloud
   color: green
@@ -20,7 +20,7 @@ inputs:
     description: 'Determines if force push is used'
     required: false
   directory:
-    description: 'Directory to change to before pushing.'
+    description: 'Directory of contents to push.'
     required: false
     default: '.'
 runs:
