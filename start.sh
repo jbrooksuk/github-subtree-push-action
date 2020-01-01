@@ -21,4 +21,4 @@ cd ${INPUT_DIRECTORY}
 
 remote_repo="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
 
-git push "${remote_repo}" HEAD:${INPUT_BRANCH} --follow-tags $_FORCE_OPTION;
+git subtree push --prefix "${INPUT_DIRECTORY}" "${remote_repo}" $INPUT_BRANCH $_FORCE_OPTION;
