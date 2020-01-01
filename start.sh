@@ -17,8 +17,6 @@ if ${INPUT_FORCE}; then
     _FORCE_OPTION='--force'
 fi
 
-cd ${INPUT_DIRECTORY}
-
 remote_repo="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
 
 git subtree push --prefix "${INPUT_DIRECTORY}" "${remote_repo}" $INPUT_BRANCH $_FORCE_OPTION;
