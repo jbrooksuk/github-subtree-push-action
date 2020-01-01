@@ -20,9 +20,14 @@ inputs:
     description: 'Determines if force push is used'
     required: false
   directory:
-    description: 'Directory of contents to push.'
+    description: 'Directory to change to before pushing.'
     required: false
     default: '.'
+  publish_directory:
+    description: 'Directory of contents to push.'
+    required: true
+    default: '.'
+    
 runs:
   using: 'node12'
   main: 'start.js'
